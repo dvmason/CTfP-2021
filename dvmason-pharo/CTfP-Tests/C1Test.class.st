@@ -8,6 +8,8 @@ Class {
 C1Test >> testCompose [
 	self assert: (#(1 4 8) verifyIdComposable: #sum).
 	self assert: (#(1 4 8) verifyIdComposable: #reversed).
+	self assert: (#abs <> #negated value: 42) equals: 42.
+	self assert: (#negated <> #abs value: -42) equals: -42.
 
 ]
 
